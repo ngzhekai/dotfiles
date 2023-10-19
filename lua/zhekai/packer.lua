@@ -62,8 +62,16 @@ return require('packer').startup(function(use)
     use {
         'prettier/vim-prettier',
         run = 'yarn install',
-        ft = {'javascript', 'javascriptreact', 'typescriptreact', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
+        ft = {'javascript', 'javascriptreact', 'typescriptreact', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html', 'yaml'}
     }
     use 'terrortylor/nvim-comment'
     require('nvim_comment').setup()
+
+    -- install without yarn or npm
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && pn install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
