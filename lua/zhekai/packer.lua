@@ -74,4 +74,9 @@ return require('packer').startup(function(use)
     })
 
     use({ "iamcco/markdown-preview.nvim", run = "cd app && pn install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+    use({ "craftzdog/solarized-osaka.nvim", require('solarized-osaka')})
+
+    use "windwp/nvim-autopairs"
+    use "windwp/nvim-ts-autotag"
 end)

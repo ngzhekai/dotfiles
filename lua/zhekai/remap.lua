@@ -38,3 +38,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>sv", [[:source $MYVIMRC<CR>]], { noremap = true, silent = true})
+
+vim.keymap.set("n", "<Tab>", vim.cmd.tabnext)
+vim.keymap.set("n", "<S-Tab>", vim.cmd.tabprev)
