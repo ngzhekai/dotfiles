@@ -1,1 +1,9 @@
-plugin/packer_compiled.lua
+# Ignore all folders and files
+/*
+
+# But do not ignore nvim and tmux folders
+!/nvim/
+!/tmux/
+
+# Ignore compiled plugin
+/nvim/plugin/packer_compiled.lua
