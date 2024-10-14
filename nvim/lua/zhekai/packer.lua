@@ -62,7 +62,7 @@ return require('packer').startup(function(use)
     use {
         'prettier/vim-prettier',
         run = 'yarn install',
-        ft = {'javascript', 'javascriptreact', 'typescriptreact', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html', 'yaml'}
+        ft = {'javascript', 'javascriptreact', 'typescriptreact', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html', 'yaml', 'svelte'}
     }
     use 'terrortylor/nvim-comment'
     require('nvim_comment').setup()
