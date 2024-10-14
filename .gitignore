@@ -7,3 +7,4 @@
 
 # Ignore compiled plugin
 /nvim/plugin/packer_compiled.lua
+/tmux/plugin/
